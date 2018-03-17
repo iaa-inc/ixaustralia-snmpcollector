@@ -1,0 +1,15 @@
+{
+  "name": "ixaustralia-snmpcollector",
+  "version": "1.0.0",
+  "author": "ixaustralia",
+  "summary": "Control the Snmpcollector Go package created by toni-moreno",
+  "license": "Apache-2.0",
+  "source": "https://github.com/ixaustralia/ixaustralia-snmpcollector",
+  "project_page": "https://github.com/ixaustralia/ixaustralia-snmpcollector",
+  "issues_url": "https://github.com/ixaustralia/ixaustralia-snmpcollector/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+
