@@ -83,3 +83,6 @@ Below is the absolute minimum required for each type, see manifest -> *.pp for a
 
    Configure SNMP Devices such as routers and switch.
    Required parametres: host, database (name of an influxserver instance)
+
+## Limitations
+This *should* work on all Debian/RHEL variants, however there may be cases where specific releases of a distribution have minor dependency differences. For example, there's a single dependency package difference between Ubuntu 16.04 and 18.04. It has been tested on Ubuntu Xenial (16.04) LTS, Bionic (18.04) and CentOS 7.
