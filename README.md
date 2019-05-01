@@ -20,11 +20,16 @@ It can install and configure the required packages and authentication as well as
 
 ### Setup Requirements **OPTIONAL**
 
-This module has only been tested on Ubuntu Xenial (16.04) LTS.
+This module has only been tested on Ubuntu Xenial (16.04) LTS, Bionic (18.04) and CentOS 7.
 
 ### Beginning with snmpcollector
 
-No setup is required other than adding this module to your Puppetfile.
+No setup is required other than adding a reference to this module to your Puppetfile.
+
+```
+mod 'ixaustralia/snmpcollector',
+    :git => 'https://github.com/ixaustralia/ixaustralia-snmpcollector.git'
+```
 
 ## Usage
 
