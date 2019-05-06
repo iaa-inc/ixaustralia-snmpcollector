@@ -66,7 +66,8 @@ module Snmpcollector
       'scale' => 'Scale',
       'shift' => 'Shift',
       'is_tag' => 'IsTag',
-      'extra_data' => 'ExtraData',}
+      'extra_data' => 'ExtraData',
+      'conversion' => 'Conversion',}
     end
 
     def self.measurement
@@ -102,3 +103,4 @@ module Snmpcollector
     end
   end
 end
+
