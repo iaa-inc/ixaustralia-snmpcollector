@@ -52,7 +52,7 @@ Puppet::Type.newtype(:snmpcollector_metric) do
 		defaultto ''
 	end
 
-	newproperty(conversion) do
+	newproperty(:conversion) do
 		desc 'Conversion value'
 		defaultto 0
 	end
