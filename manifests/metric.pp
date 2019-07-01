@@ -8,7 +8,8 @@ define snmpcollector::metric(
 		Integer $scale		 		= 0, 
 		Integer $shift		 		= 0,
 		Boolean $is_tag				= false,
-		String $extra_data 			= ''
+		String $extra_data 			= '',
+		Integer $conversion			= 0
 ) 
 {
 	include snmpcollector::reload
@@ -25,6 +26,8 @@ define snmpcollector::metric(
 		scale => $scale,
 		shift => $shift,
 		is_tag => $is_tag,
-		extra_data => $extra_data
+		extra_data => $extra_data,
+		conversion => $conversion
 	} ~> Class['snmpcollector::reload']
 }
+

@@ -51,4 +51,10 @@ Puppet::Type.newtype(:snmpcollector_metric) do
 		desc 'Additional Data.'
 		defaultto ''
 	end
+
+	newproperty(:conversion) do
+		desc 'Conversion value'
+		defaultto 0
+	end
 end
+

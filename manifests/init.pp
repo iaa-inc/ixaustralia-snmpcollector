@@ -28,13 +28,13 @@
 # --------
 #
 # @example
-		# class {'snmpcollector' :
-		#     	instance_name => 'instance01',
-		# 		web_port => 8090,
-		# 		admin_username => 'admin',
-		# 		admin_password => 'strongpassword',
-		# 		service_enabled => true,
-		# }
+    # class {'snmpcollector' :
+    #     	instance_name => 'instance01',
+    # 		web_port => 8090,
+    # 		admin_username => 'admin',
+    # 		admin_password => 'strongpassword',
+    # 		service_enabled => true,
+    # }
 #
 # Authors
 # -------
@@ -43,26 +43,26 @@
 #
 #
 class snmpcollector (
-	String $version,
-	String $instance_name,
-	Integer $web_port,
-	String $admin_username,
-	String $admin_password,
-	Boolean $service_enabled,
+  String $version = 'latest',
+  String $instance_name,
+  Integer $web_port,
+  String $admin_username,
+  String $admin_password,
+  Boolean $service_enabled,
 )
 {
 
- 	class {'snmpcollector::install': 
- 		version => $version
- 	} -> 
- 	class {'snmpcollector::configure' :
- 		instance_name => $instance_name,
- 		web_port => $web_port,
- 		admin_username => $admin_username,
- 		admin_password => $admin_password,
- 		service_enabled => $service_enabled
- 	} ~> 
- 	class {'snmpcollector::service' :
- 		enable => $service_enabled
- 	}
+  class {'snmpcollector::install': 
+    version => $version
+  } -> 
+  class {'snmpcollector::configure' :
+    instance_name => $instance_name,
+    web_port => $web_port,
+    admin_username => $admin_username,
+    admin_password => $admin_password,
+    service_enabled => $service_enabled
+  } ~> 
+  class {'snmpcollector::service' :
+    enable => $service_enabled
+  }
 }
